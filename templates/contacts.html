@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="contact-page">
+
+    <h1 class="display-4 fw-light mb-5">Контакти</h1>
+
+    <p class="lead text-muted mb-5">
+        Доступна для нових проєктів та співпраці.<br>
+        Зазвичай відповідаю протягом кількох годин.
+    </p>
+
+    <form action="#" method="POST" novalidate class="contact-form">
+
+        <div class="field">
+            <label for="name" class="field-label">Ім’я</label>
+            <input type="text" id="name" name="name" placeholder="Гасюк Діана" required>
+        </div>
+
+        <div class="field">
+            <label for="email" class="field-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="diana.hasiuk.23@pnu.edu.ua" required>
+        </div>
+
+        <div class="field">
+            <label for="message" class="field-label">Повідомлення</label>
+            <textarea id="message" name="message" rows="6" placeholder="Розкажіть про ваш проєкт або задачу…" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Надіслати повідомлення</button>
+    </form>
+
+    <p class="contact-direct">
+        або пишіть напряму → 
+        <a href="mailto:diana.hasiuk.23@pnu.edu.ua">diana.hasiuk.23@pnu.edu.ua</a>
+    </p>
+
+</div>
+
+{% endblock %}
