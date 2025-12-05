@@ -1,0 +1,180 @@
+:root {
+    
+    --color-text: #2d2d2d;
+    --color-muted: #71717a;
+    --color-border: #dceef4;
+    --color-accent: #cceaf1;     
+    --bg: #fafcfd;             
+    --transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--color-text);
+    background: var(--bg);
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.05rem;
+}
+
+/* Навігація */
+.navbar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(14px);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.8px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover { opacity: 0.7; }
+
+.nav-link {
+    color: var(--color-muted);
+    font-weight: 500;
+    margin-left: 3rem;
+    text-decoration: none;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--color-text);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -6px;
+    left: 0;
+    background: var(--color-accent);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after { width: 100%; }
+
+/* Контейнери та секції */
+.container { max-width: 880px; }
+main { flex: 1; padding: 6rem 0 9rem; }
+
+h1.display-4 {
+    font-weight: 300;
+    letter-spacing: -1px;
+    font-size: 3.5rem;
+    color: var(--color-text);
+}
+
+h2.h4 {
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 2.2rem;
+}
+
+section {
+    padding: 4.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+footer {
+    padding: 3.5rem 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-border);
+}
+
+/* Форма контактів — тепер з ніжним акцентом */
+.contact-page { max-width: 640px; margin: 0 auto; }
+.contact-form .field + .field { margin-top: 5.5rem; }
+
+.field-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    background: transparent;
+    font-size: 1.45rem;
+    font-weight: 300;
+    color: var(--color-text);
+    transition: border-color .45s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+    font-weight: 300;
+}
+
+.submit-btn {
+    margin-top: 3.5rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.submit-btn::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 1.5px;
+    background: var(--color-accent);
+    transition: width .6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover::after { width: 100%; }
+
+.contact-direct a {
+    color: var(--color-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent);
+    transition: var(--transition);
+}
+
